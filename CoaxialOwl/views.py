@@ -7,4 +7,4 @@ def index(request):
 	ctx["error"] = 404
 	ctx["message"] = "URL Not Found"
 	#return HttpResponse("<h1>Hello World</h1>")
-	return render(request, "root.html", {"name" : "CoaxialOwl"})
+	return render(request, "home.html", {"name" : "CoaxialOwl"})
