@@ -1,0 +1,26 @@
+db.sqlite3
+
+# File types #
+##############
+*.pyc
+*.swo
+*.swp
+*.swn
+
+# Directories #
+###############
+logs/
+__pycache__
+
+# Specific files #
+##################
+CoaxialOwl/settings.py
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon
+Thumbs.db
+*~
+
