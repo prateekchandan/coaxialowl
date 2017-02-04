@@ -1,0 +1,15 @@
+appdirs==1.4.0
+Django==1.10.5
+django-allauth==0.30.0
+django-appconf==1.0.2
+django-avatar==3.1.0
+django-widget-tweaks==1.4.1
+oauthlib==2.0.1
+olefile==0.44
+packaging==16.8
+Pillow==4.0.0
+pyparsing==2.1.10
+python-openid==2.2.5
+requests==2.13.0
+requests-oauthlib==0.7.0
+six==1.10.0
