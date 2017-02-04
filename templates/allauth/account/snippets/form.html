@@ -1,0 +1,16 @@
+{% load widget_tweaks %}
+{% for field in form %}
+        <div class="md-form-group float-label">
+        {{ field.errors }}
+        {% if field|field_type == "booleanfield" %}
+          <div class="m-b-md">        
+            <label class="md-check">
+              {% render_field field class="has-value" %}<i class="primary"></i> {{ field.label_tag }}
+            </label>
+          </div>
+        {% else %}
+        {% render_field field class="md-input" placeholder="" %}
+          <label>{{ field.label_tag }}</label>
+        </div>
+        {% endif %}
+        {% endfor %}

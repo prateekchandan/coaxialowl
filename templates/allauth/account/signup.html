@@ -1,0 +1,38 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+{% load widget_tweaks %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<div class="center-block w-xxl w-auto-xs p-y-md">
+    <div class="navbar">
+      <div class="pull-center">
+        <a class="navbar-brand"><span class="hidden-folded inline">{% trans "Sign Up" %}</span></a>
+      </div>
+    </div>
+    <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
+      {% get_providers as socialaccount_providers %}
+      {% if socialaccount_providers %}
+      <label>Signup With</label>
+      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+      <hr class="hr-text" data-content="OR">
+      {% include "socialaccount/snippets/login_extra.html" %}
+      {% endif %}
+      <form name="form" class="login" method="POST" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {% include "account/snippets/form.html" %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button type="submit" class="btn primary btn-block p-x-md">{% trans "Sign UP" %}</button>
+      </form>
+    </div>
+
+    <div class="p-v-lg text-center">
+      <div>Do not have an account? <a  href="{% url 'account_signup' %}" class="text-primary _600">Sign up</a></div>
+    </div>
+  </div>
+{% endblock %}
