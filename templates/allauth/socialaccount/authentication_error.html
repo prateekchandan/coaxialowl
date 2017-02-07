@@ -5,7 +5,17 @@
 {% block head_title %}{% trans "Social Network Login Failure" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Social Network Login Failure" %}</h1>
-
-<p>{% trans "An error occurred while attempting to login via your social network account." %}</p>
+<div class="center-block w-xxxl w-auto-xs p-y-md">
+    <div class="navbar">
+      <div class="pull-center">
+        <a class="navbar-brand">
+	<span class="hidden-folded inline">{% trans "Social Network Login Failure" %}</span></a>
+      </div>
+    </div>
+    <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
+      <div class="m-b text-md">
+       {% trans "An error occurred while attempting to login via your social network account." %}
+      </div>
+    </div>
+</div>
 {% endblock %}

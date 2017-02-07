@@ -4,9 +4,18 @@
 
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
-{% block content %}
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
-
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
-
+{% block content %>
+<div class="center-block w-xxxl w-auto-xs p-y-md">
+    <div class="navbar">
+      <div class="pull-center">
+        <a class="navbar-brand">
+	<span class="hidden-folded inline">{% trans "Verify Your E-mail Address" %}</span></a>
+      </div>
+    </div>
+    <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
+      <div class="m-b text-md">
+       {% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}
+      </div>
+    </div>
+</div>
 {% endblock %}

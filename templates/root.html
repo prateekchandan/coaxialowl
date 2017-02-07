@@ -282,6 +282,8 @@
          <!-- / -->
          <!-- ############ LAYOUT END-->
       </div>
+      {% block extra_body %}
+      {% endblock %}
       <script src="{% static 'scripts/app.html.js' %}"></script>
       <script src="{% static 'libs/jquery/screenfull/dist/screenfull.min.js' %}"></script>
    </body>
