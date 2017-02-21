@@ -1,15 +1,37 @@
 {% extends "root.html"%}
-
+{% load static %}
+{% block head_title %}Home{% endblock %}
 {% block body %}
-<div class="text-center pos-rlt p-y-md amber">
-    <h1 class="text-shadow m-a-0 text-white text-4x">
-      <span class="text-2x font-bold block m-t-lg">404</span>
-    </h1>
-    <h2 class="h1 m-y-lg text-black">OOPS!</h2>
-    <p class="h5 m-y-lg text-u-c font-bold text-black">Sorry! the page you are looking for doesn't exist.</p>
-    <a ui-sref="app.dashboard" class="md-btn amber-700 md-raised p-x-md">
-      <span class="text-white">Go to the home page</span>
-    </a>
+<div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="30" height="30" style="position:fixed; z-index:0; left:50%; top: 20%" class="animated fadeInDownBig">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="rgba(0,0,0,0.05)"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="10" height="10" style="position:fixed; z-index:0; left:49%; top: 15%" class="animated fadeInDown">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="#a88add"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="5" height="5" style="position:fixed; z-index:0; left:30%; top: 0%" class="animated fadeInDown">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="#a88add"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="20" height="20" style="position:fixed; z-index:0; right:5%; top: 30%" class="animated fadeInDown">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="#0cc2aa"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="15" height="15" style="position:fixed; z-index:0; left:34.5%; top: 55%" class="animated fadeIn">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="#fcc100"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" style="position:fixed; z-index:0; right:20%; top: 70%" class="animated fadeInUp">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="rgba(252,193,0,0.1)"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="120" height="120" style="position:fixed; z-index:0; left:0%; top: 30%" class="animated fadeInLeftBig">
+        <path d="M 50 0 L150 0 L200 100 L150 200 L50 200 L0 100 Z" fill="rgba(0,0,0,0.03)"></path>
+      </svg>
   </div>
-
+<div class="h-v-5 white row-col">
+      <div class="row-cell v-b">
+        <div class="container p-y-lg pos-rlt text-center">
+          <h1 class=""><img style="width:40%" src="{% static 'images/name.png' %}"></h1>
+          <h2 class="display-3 _700 l-s-n-3x m-t-lg m-b-md">Always be a <span class="text-primary">beginner</span></h2>
+          <h5 class="text-muted m-b-lg">Launching soon...</h5>
+        </div>
+      </div>
+    </div>
 {% endblock %}

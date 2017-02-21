@@ -4,11 +4,9 @@ from allauth.exceptions import ImmediateHttpResponse
 from allauth.socialaccount.signals import pre_social_login
 from allauth.account.utils import perform_login
 from allauth.utils import get_user_model
-from django.http import HttpResponse
 from django.dispatch import receiver
 from django.shortcuts import redirect
 from django.conf import settings
-import json
 
 
 class MyLoginAccountAdapter(DefaultAccountAdapter):
@@ -29,7 +27,7 @@ class MyLoginAccountAdapter(DefaultAccountAdapter):
 
 class MySocialAccountAdapter(DefaultSocialAccountAdapter):
     '''
-    Overrides allauth.socialaccount.adapter.DefaultSocialAccountAdapter.pre_social_login to 
+    Overrides allauth.socialaccount.adapter.DefaultSocialAccountAdapter.pre_social_login to
     perform some actions right after successful login
     '''
     def pre_social_login(self, request, sociallogin):

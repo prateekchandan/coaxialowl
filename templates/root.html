@@ -51,7 +51,7 @@
                   <ul class="nav navbar-nav pull-right">
                     <li class="nav-item"><a class="nav-link" ui-fullscreen=""><span><i class="fa fa-fw fa-arrows-v"></i></span></a></li>
                     <li class="nav-item dropdown">
-                        <a href="" class="nav-link" data-toggle="dropdown"><i class="material-icons"></i> <span class="label up p-a-0 accent"></span></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown"><i class="material-icons"></i> <span class="label up p-a-0 accent"></span></a>
                         <div class="dropdown-menu w-xl text-color pull-right p-a-0 animated flipInX">
                            <div class="row no-gutter text-primary-hover">
                               <div class="col-xs-4 b-r b-b"><a class="p-a block text-center"><i class="material-icons md-24 text-muted m-v-sm"></i> <span class="block">Alarm</span></a></div>
@@ -64,43 +64,68 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="" class="nav-link" data-toggle="dropdown"><i class="material-icons"></i> <span class="label up p-a-0 warn"></span></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown"><i class="material-icons"></i> <span class="label up p-a-0 warn"></span></a>
                         <div class="dropdown-menu pull-right w-xl animated fadeInUp no-bg no-border no-shadow">
                            <div class="scrollable" style="max-height: 220px">
                               <ul class="list-group list-group-gap m-a-0">
-                                 <li class="list-group-item black lt box-shadow-z0 b"><span class="pull-left m-r"><img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle"></span> <span class="clear block">Use awesome <a href="" class="text-primary">animate.css</a><br><small class="text-muted">10 minutes ago</small></span></li>
-                                 <li class="list-group-item black lt box-shadow-z0 b"><span class="pull-left m-r"><img src="../assets/images/a1.jpg" alt="..." class="w-40 img-circle"></span> <span class="clear block"><a href="" class="text-primary">Joe</a> Added you as friend<br><small class="text-muted">2 hours ago</small></span></li>
-                                 <li class="list-group-item dark-white text-color box-shadow-z0 b"><span class="pull-left m-r"><img src="../assets/images/a2.jpg" alt="..." class="w-40 img-circle"></span> <span class="clear block"><a href="" class="text-primary">Danie</a> sent you a message<br><small class="text-muted">1 day ago</small></span></li>
+                                 <li class="list-group-item black lt box-shadow-z0 b"><span class="pull-left m-r"><img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle"></span> <span class="clear block">Use awesome <a href="#" class="text-primary">animate.css</a><br><small class="text-muted">10 minutes ago</small></span></li>
+                                 <li class="list-group-item black lt box-shadow-z0 b"><span class="pull-left m-r"><img src="../assets/images/a1.jpg" alt="..." class="w-40 img-circle"></span> <span class="clear block"><a href="#" class="text-primary">Joe</a> Added you as friend<br><small class="text-muted">2 hours ago</small></span></li>
+                                 <li class="list-group-item dark-white text-color box-shadow-z0 b"><span class="pull-left m-r"><img src="../assets/images/a2.jpg" alt="..." class="w-40 img-circle"></span> <span class="clear block"><a href="#" class="text-primary">Danie</a> sent you a message<br><small class="text-muted">1 day ago</small></span></li>
                               </ul>
                            </div>
                         </div>
                     </li>
                      {% if user.is_authenticated %}
-                     <li class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle clear" data-toggle="dropdown"><span class="avatar w-32"><img src="{% if user.socialaccount_set.all.0.get_avatar_url %} {{ user.socialaccount_set.all.0.get_avatar_url }} {% else %} {% avatar_url user %} {% endif %}" > <i class="busy b-white right"></i></span></a>
-                        <div class="dropdown-menu pull-right dropdown-menu-scale">
-                           <a class="dropdown-item" href="{% url 'account_email' %}"><span>Change Email</span></a>
-                           <div class="dropdown-divider"></div>
-                           <a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a>
-                        </div>
-                     </li>
-                    {% else %}
-                    	<li class="nav-item">
-                        	<a class="nav-link clear"  href="{% url 'account_login' %}">Login</a>
+                        <li class="nav-item dropdown">
+                           <a href="#" class="nav-link dropdown-toggle clear" data-toggle="dropdown"><span class="avatar w-32"><img src="{% if user.socialaccount_set.all.0.get_avatar_url %} {{ user.socialaccount_set.all.0.get_avatar_url }} {% else %} {% avatar_url user %} {% endif %}" > <i class="busy b-white right"></i></span></a>
+                           <div class="dropdown-menu pull-right dropdown-menu-scale">
+                              <a class="dropdown-item" href="{% url 'account_email' %}"><span>Change Email</span></a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a>
+                           </div>
+                        </li>
+                     {% else %}
+                       	<li class="nav-item">
+                           <a class="nav-link clear"  href="{% url 'account_login' %}">Login</a>
                         </li>
                         <li class="nav-item">
-                        	<a class="nav-link clear"  href="{% url 'account_signup' %}">Signup</a>
+                           <a class="nav-link clear"  href="{% url 'account_signup' %}">Signup</a>
                         </li>
-                    {% endif %}
+                     {% endif %}
                   </ul>
                   <div class="collapse navbar-toggleable-sm" id="navbar-4" data-pjax="">
                      <form class="navbar-form form-inline pull-right pull-none-sm navbar-item v-m" role="search">
                         <div class="form-group l-h m-a-0">
-                           <div class="input-group"><input type="text" class="form-control form-control-sm p-x b-a rounded" placeholder="Search projects..."></div>
+                           <div class="input-group"><input type="text" class="form-control form-control-sm p-x b-a rounded" placeholder="Search coachings..."></div>
                         </div>
                      </form>
                      <ul class="nav navbar-nav pull-left nav-active-border b-primary">
-                        <li class="nav-item"><a href="#" class="nav-link" ui-sref="app.dashboard" ui-sref-active="active"><span class="nav-text">Home</span></a></li>
+                        {% for genre in MENU.child_nodes %}
+                            <li class="nav-item dropdown pos-stc"><a href class="nav-link dropdown-toggle" data-toggle="dropdown"><span class="nav-text">{{ genre.name }}</span></a>
+                            <div class="dropdown-menu pull-down p-a w-full text-color text-primary-hover">
+                                <div class="row">
+                                    {% for classes in genre.child_nodes %}
+                                    <div class="col-sm-3">
+                                        <div class="_600 text-u-c m-y-sm">{{ classes.name }}</div>
+                                        <div class="row">
+                                            {% for types in classes.child_nodes %}
+                                                <div class="col-xs-6">
+                                                <h5><span class="label">{{types.name}}</span></h5>
+                                                <ul class="nav l-h-2x">
+                                                    {% for course in types.child_nodes %}
+                                                    <li><a href="{% url 'course_by_id' course.url_name %}" ><span>{{course.name}}</span></a>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
                        
                      </ul>
                   </div>
@@ -117,165 +142,26 @@
             </div>
             <div class="dark dk pos-rlt">
                <div class="p-md">
-                  <div class="footer p-a p-x-md">
-                     <div class="row">
-                        <div class="col-md-3">
-                           <div class="clearfix">
-                              <a class="navbar-brand">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
-                                    <path d="M 4 4 L 44 4 L 44 44 Z" fill="#a88add"></path>
-                                    <path d="M 4 4 L 34 4 L 24 24 Z" fill="rgba(0,0,0,0.15)"></path>
-                                    <path d="M 4 4 L 24 4 L 4  44 Z" fill="#0cc2aa"></path>
-                                 </svg>
-                                 <img src="../assets/images/logo.png" alt="." class="hide"> <span class="hidden-folded inline">{{ APP_NAME }}</span>
-                              </a>
-                           </div>
-                           <div class="m-v-md">
-                              <p class="text-muted">Coaxialowl is an educational site in which we provide better platform for the students to take direct admission in different institution, college and classes for different courses and activity( as mention on next paragraph) to explore their needs.</p>
-                           </div>
+                   <div class="footer p-a-md">
+                        <div class="text-center">
+                            <div class="clearfix text m-t">Coaxialowl is an educational site in which we provide better platform for the students to take direct admission in different institution, college and classes for different courses and activity( as mention on next paragraph) to explore their needs.</div>
+                            <div class="nav m-y"><a class="nav-link m-r" href=""><span>Home</span></a> <a class="nav-link m-r" href=""><span>Shop</span></a> <a class="nav-link m-r" href=""><span>Blog</span></a> <a class="nav-link m-r" href=""><span>Service</span></a> <a class="nav-link m-r" href=""><span>About us</span></a> <a class="nav-link m-r" href=""><span>Contact</span></a>
+                            </div>
+                            <div class="block clearfix">
+                                <a href="https://www.facebook.com/COAXIALOWL/" class="btn btn-icon btn-social btn-sm white"><i class="fa fa-facebook"></i> <i class="fa fa-facebook indigo"></i></a>
+                                <a href="https://www.youtube.com/channel/UCr07oLmA6xkHjVkdg48Ro_g" class="btn btn-icon btn-social btn-sm white"><i class="fa fa-youtube"></i> <i class="fa fa-youtube red"></i></a> 
+                            </div>
                         </div>
-                        <div class="col-md-6 text-primary-hover">
-                           <div class="row m-t-md">
-                              <div class="col-sm-4">
-                                 <h6 class="text-u-c m-b">Apps</h6>
-                                 <div class="m-b-md">
-                                    <ul class="nav l-h-2x">
-                                       <li class="nav-item"><a class="nav-link" href="">Project</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Inbox</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Calendar</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Note</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Todo</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <h6 class="text-u-c m-b">Blog</h6>
-                                 <div class="m-b-md">
-                                    <ul class="nav l-h-2x">
-                                       <li class="nav-item"><a class="nav-link" href="">Life style</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Fashion</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Travel</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Entertainment</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Local</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <h6 class="text-u-c m-b">About</h6>
-                                 <div class="m-b-md">
-                                    <ul class="nav l-h-2x">
-                                       <li class="nav-item"><a class="nav-link" href="">Company</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Services</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Team</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="">Support</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
+                        <div class="b b-b m-y-md"></div>
+                        <div class="row footer-bottom">
+                            <div class="col-sm-8"><small class="text-muted">© Copyright {{ CURRENT_YEAR }}. All rights reserved.</small>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="text-sm-right text-xs-left"><strong>{{ APP_NAME }}</strong>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                           <h6 class="text-u-c m-b m-t-md">Subscribe</h6>
-                           <p>Do not want to miss our newsletter?</p>
-                           <form class="m-b-lg"><input type="text" class="form-control" placeholder="Your email"> <button type="submit" class="btn btn-primary m-t">Subscribe</button></form>
-                        </div>
-                     </div>
-                     <div class="b b-b m-b m-t-lg"></div>
-                     <div class="row">
-                        <div class="col-sm-8">
-                           <div class="clearfix"><a href="https://www.facebook.com/COAXIALOWL/" class="btn btn-icon btn-social btn-sm white"><i class="fa fa-facebook"></i> <i class="fa fa-facebook indigo"></i></a> <a href="https://www.youtube.com/channel/UCr07oLmA6xkHjVkdg48Ro_g" class="btn btn-icon btn-social btn-sm white"><i class="fa fa-youtube"></i> <i class="fa fa-youtube red"></i></a> </div>
-                        </div>
-                        <div class="col-sm-4">
-                           <div class="text-sm-right text-xs-left"><small class="text-muted">© Copyright {{ CURRENT_YEAR }}. All rights reserved.</small></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- / -->
-         <!-- theme switcher -->
-         <div id="switcher">
-            <div class="switcher box-color dark-white text-color" id="sw-theme">
-               <a href="" ui-toggle-class="active" target="#sw-theme" class="box-color dark-white text-color sw-btn">
-               <i class="fa fa-gear"></i>
-               </a>
-               <div class="box-header">
-                  <h2>Theme Switcher</h2>
-               </div>
-               <div class="box-divider"></div>
-               <div class="box-body">
-                  <p class="hidden-md-down">
-                     <label class="md-check m-y-xs" data-target="folded">
-                     <input type="checkbox" class="has-value">
-                     <i class="green"></i>
-                     <span class="hidden-folded">Folded Aside</span>
-                     </label>
-                     <label class="md-check m-y-xs" data-target="boxed">
-                     <input type="checkbox" class="has-value">
-                     <i class="green"></i>
-                     <span class="hidden-folded">Boxed Layout</span>
-                     </label>
-                     <label class="m-y-xs pointer" ui-fullscreen="">
-                     <span class="fa fa-expand fa-fw m-r-xs"></span>
-                     <span>Fullscreen Mode</span>
-                     </label>
-                  </p>
-                  <p>Colors:</p>
-                  <p data-target="themeID">
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'primary', accent:'accent', warn:'warn'}">
-                     <input type="radio" name="color" value="1" class="has-value">
-                     <i class="primary"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'accent', accent:'cyan', warn:'warn'}">
-                     <input type="radio" name="color" value="2" class="has-value">
-                     <i class="accent"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'warn', accent:'light-blue', warn:'warning'}">
-                     <input type="radio" name="color" value="3" class="has-value">
-                     <i class="warn"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'success', accent:'teal', warn:'lime'}">
-                     <input type="radio" name="color" value="4" class="has-value">
-                     <i class="success"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'info', accent:'light-blue', warn:'success'}">
-                     <input type="radio" name="color" value="5" class="has-value">
-                     <i class="info"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'blue', accent:'indigo', warn:'primary'}">
-                     <input type="radio" name="color" value="6" class="has-value">
-                     <i class="blue"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'warning', accent:'grey-100', warn:'success'}">
-                     <input type="radio" name="color" value="7" class="has-value">
-                     <i class="warning"></i>
-                     </label>
-                     <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md" data-value="{primary:'danger', accent:'grey-100', warn:'grey-300'}">
-                     <input type="radio" name="color" value="8" class="has-value">
-                     <i class="danger"></i>
-                     </label>
-                  </p>
-                  <p>Themes:</p>
-                  <div data-target="bg" class="text-u-c text-center _600 clearfix">
-                     <label class="p-a col-xs-6 light pointer m-a-0">
-                     <input type="radio" name="theme" value="" hidden="">
-                     Light
-                     </label>
-                     <label class="p-a col-xs-6 grey pointer m-a-0">
-                     <input type="radio" name="theme" value="grey" hidden="" class="has-value">
-                     Grey
-                     </label>
-                     <label class="p-a col-xs-6 dark pointer m-a-0">
-                     <input type="radio" name="theme" value="dark" hidden="" class="has-value">
-                     Dark
-                     </label>
-                     <label class="p-a col-xs-6 black pointer m-a-0">
-                     <input type="radio" name="theme" value="black" hidden="" class="has-value">
-                     Black
-                     </label>
-                  </div>
+                    </div>
                </div>
             </div>
          </div>

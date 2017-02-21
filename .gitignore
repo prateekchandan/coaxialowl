@@ -11,10 +11,12 @@ db.sqlite3
 ###############
 logs/
 __pycache__
+media/
+migrations/
 
 # Specific files #
 ##################
-CoaxialOwl/settings.py
+CoaxialOwl/;ocal_settings.py
 
 # OS generated files #
 ######################

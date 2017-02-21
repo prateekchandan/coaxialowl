@@ -1,0 +1,88 @@
+{% extends "root.html" %}
+{% block head_title %}{{course.display}}{% endblock %}
+{% block body %}
+<div class="padding">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="box">
+                <div class="box-header">
+                <h3>{{course.display}}</h3>
+                </div>
+                <div class="box-body dker">
+                {% autoescape off %}{{course.description}}{% endautoescape %}
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                <h3>Subjects</h3>
+                <small>List of subjects which are taught in this course</small>
+                </div>
+                <div class="box-body dker">
+                    {% if not subjects %}
+                    <p>No subjects are found in this course</p>
+                    {% else %}
+                        {% for subject in subjects %}
+                            <div class="box">
+                                <div class="box-header primary">
+                                <h3>{{subject.display}}</h3>
+                                </div>
+                                <div class="box-body">
+                                <p class="m-a-0">{% autoescape off %}{{subject.description}}{% endautoescape %}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box">
+                <div class="box-header">
+                <h3>Coachings</h3>
+                <small></small>
+                </div>
+                <div class="box-body dker">
+                    <ul class="list inset m-a-0">
+                        <li class="list-item">
+                            <a herf="" class="list-left">
+                            <span class="w-40 circle purple avatar">
+                                <span>S</span>
+                                <i class="busy b-white"></i>
+                            </span>
+                            </a>
+                            <div class="list-body">
+                            <div><a href="#">Sharma Classes</a></div>
+                            <small class="text-muted text-ellipsis">Daulatpur, bhopal</small>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <a herf="" class="list-left">
+                            <span class="w-40 circle purple avatar">
+                                <span>G</span>
+                                <i class="busy b-white"></i>
+                            </span>
+                            </a>
+                            <div class="list-body">
+                            <div><a href="#">Gupta Classes</a></div>
+                            <small class="text-muted text-ellipsis">Daulatpur, bhopal</small>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <a herf="" class="list-left">
+                            <span class="w-40 circle purple avatar">
+                                <span>C</span>
+                                <i class="busy b-white"></i>
+                            </span>
+                            </a>
+                            <div class="list-body">
+                            <div><a href="">Career Point</a></div>
+                            <small class="text-muted text-ellipsis">Meerpur, bhopal</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
