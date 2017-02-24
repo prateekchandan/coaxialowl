@@ -16,7 +16,7 @@ migrations/
 
 # Specific files #
 ##################
-CoaxialOwl/;ocal_settings.py
+CoaxialOwl/local_settings.py
 
 # OS generated files #
 ######################

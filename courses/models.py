@@ -15,8 +15,8 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
 
-CLASS_CHOICES = ((5, "Class 1-5"), (10, "Class 6-10"), (12, "Class 11-12"), (16, "Graduation"),
-                 (100, "All"))
+CLASS_CHOICES = ((5, "Class 1-5"), (8, "Class 6-8"), (10, "Class 9-10"), (12, "Class 11-12"),
+                 (16, "Graduation"), (100, "All"))
 class Class(models.Model):
     '''
     This is the standard in which the user studies
